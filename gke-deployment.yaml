@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appointment
+      app: gke-appointment
   template:
     metadata:
       labels:
-        app: appointment
+        app: gke-appointment
     spec:
       containers:
         - name: appointment
