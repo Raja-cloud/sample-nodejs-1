@@ -16,3 +16,18 @@ spec:
         - name: appointment
           image: gcr.io/PROJECT_ID/IMAGE:TAG
           
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appointment-srv
+spec:
+  selector:
+    app: appointment
+  ports:
+    - name: appointment
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
