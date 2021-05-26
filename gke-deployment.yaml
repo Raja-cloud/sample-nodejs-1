@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appointment-depl
+  name: gke-deployment
 spec:
   replicas: 1
   selector:
@@ -25,7 +25,7 @@ metadata:
   name: appointment-srv
 spec:
   selector:
-    app: appointment
+    app: gke-deployment
   ports:
     - name: appointment
       protocol: TCP
